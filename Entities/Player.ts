@@ -1,7 +1,7 @@
 import {Entity, Vector2D} from './Entity';
 import {Input} from '../Game';
 import {Keyboard} from '../Input/Keyboard';
-import {World} from "../World";
+import {World} from "../World/index";
 
 export class Player extends Entity {
   selectable: boolean = true;

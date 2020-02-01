@@ -4,6 +4,7 @@ import {Point} from "./Geometry/index";
 import {Mouse} from "./Input/Mouse";
 import {Keyboard} from "./Input/Keyboard";
 import {Camera} from "./Camera/Camera";
+import {Exterior} from "./World/Exterior";
 
 export interface Input {
     mouse: Mouse,
@@ -41,12 +42,13 @@ export class Game {
 
     this.worlds = [
       () => new Sandbox(canvas, this.camera, this),
-      () => new JacksRoom(canvas, this.camera, this)
+      () => new JacksRoom(canvas, this.camera, this),
+      () => new Exterior(canvas, this.camera, this)
     ];
 
     this.options = options;
 
-    this.currentWorld = this.worlds[0]();
+    this.currentWorld = this.worlds[1]();
 
     window.addEventListener('resize', () => {
       this.resizeCanvas(canvas);

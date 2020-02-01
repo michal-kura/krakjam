@@ -4,23 +4,23 @@ import {World} from "../World/World";
 import {Game} from "../Game";
 import {Sprite} from "../Graphics/Sprite";
 
-export class Portal extends Entity {
-    selectable: boolean = true;
-    color: string = 'orange';
+export class Ground extends Entity {
     game: Game;
 
     constructor(
-        private portalTarget: number = null,
         public position: Position,
         public size: Size = null,
+        public isColliding = false
     ) {
+
         super(position, size);
         this.sprite = new Sprite(
-            'https://opengameart.org/sites/default/files/styles/medium/public/wood%20tex1.png',
-            {width: 30, height: 30}
+            'https://cdn.dribbble.com/users/3671336/screenshots/8937091/1big.jpg',
+            //{width: 1600, height: 1200}
+            {width: 800, height: 600}
         );
     }
-    collisionHandler(entity: Entity, world: World, collision: Collision) {
-        world.game.setCurrentWorld(this.portalTarget)
-    }
+    // collisionHandler(entity: Entity, world: World, collision: Collision) {
+    //     world.game.setCurrentWorld(this.portalTarget)
+    // }
 }

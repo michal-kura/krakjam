@@ -1,4 +1,4 @@
-import {World} from "../World";
+import {World} from "../World/index";
 import {Input} from "../Game";
 import {Polygon, Point} from "../Geometry/index";
 import {Collision} from "../Physics/index";
@@ -12,7 +12,7 @@ export class Entity {
   rotation: number = 0;
   collidesWith: Entity[] = [];
   public isColliding: boolean = true;
-  private sprite: Sprite;
+  protected sprite: Sprite;
 
   weight: number = 1000 * 0.017;
 
