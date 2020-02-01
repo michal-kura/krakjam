@@ -1,0 +1,15 @@
+body, html, .game {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  width: 100vw;
+  hright: 100vh;
+}
+
+#lights {
+  display: none  
+}
